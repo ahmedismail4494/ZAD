@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- utf -->
+  <meta charset="utf-8" />
+  <!-- first mobile meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Title -->
+  <title>ZAD</title>
+  <!-- Description -->
+  <meta name="description" content=" Stander " />
+
+  <link rel="shortcut icon" href="/images/zaad_logo2.jpg" type="image/x-icon">
+
+
+  <!-- Start fontAwesome Code -->
+  <link rel="stylesheet" href="../css/external/all.min.css" />
+  <!-- Start bootstrap Code -->
+  <link rel="stylesheet" href="../css/external/bootstrap.min.css" />
+  <!-- Start normalize Code -->
+  <link rel="stylesheet" href="../css/external/normalize.css" />
+  <link rel="stylesheet" href="../css/external/animate.css">
+
+
+  <style>
+
+/****----    Start Body     ----****/
+body {
+  direction: rtl;
+  width: auto;
+  background: #fff;
+  font-family: "Cairo", sans-serif;
+  background-image: url("../images/zad_menu.jpg");
+}
+/****----    End   Body     ----****/
+
+/*----*  Start  header  *----*/
+header{
+  min-width: 100%;
+  height: 10vh;
+  padding: 30px 0; 
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 5px 5px 5px #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 2px;
+  z-index: 1000;
+}
+header .logo { 
+  width: 50px; 
+  color: #fff; 
+  text-decoration: none; 
+  position: relative; }
+header .logo img { width: 100%; }
+header ul{ position: relative; display: flex; margin-top: 15px; }
+header ul li{ position: relative; list-style: none; }
+header ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+header ul li a.active,
+header ul li a:hover{
+  color: #fff;
+  background-color: #205aff;
+  transition: 1s;
+  border-radius: 10px;
+}
+header .toggle{
+  display: none;
+}
+
+
+@media (max-width: 992px) {
+  
+  header ul{
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    top: -100vh;
+    transform: translateY(-100);
+    opacity: 0;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+  }
+  header.active ul{
+    top: 10vh;
+    transform: translateY(0);
+    opacity: 1;
+    transition: 1s;
+  }
+  header ul li a{
+    margin: 10px 5px;
+    font-size: 18px;
+  }
+
+  header .toggle{
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  header .toggle::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff ;
+    top: 4px;
+    box-shadow: 0 10px 0 #fff;
+    transition: 0.5s;
+  }
+  header .toggle:after{
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  header.active .toggle::before{
+    top: 14px;
+    transform: rotate(45deg);
+    box-shadow: 0 0px 0 #fff;
+    transition: 0.5s;
+  }
+  header.active .toggle:after{
+    bottom: 14px;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+  }
+
+}
+
+.products { 
+    height: 100vh; 
+    width: 100%; 
+    background-color: #dddddd;
+    padding-top: 70px;
+  }
+  .products img {  width: 100%; }
+    /* Medium devices */
+  @media (max-width: 767px) {
+      .products img {  height: 100vh; }
+  }
+
+
+/*----*  End  header  *---- */
+
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- Start Header -->
+  <header id="header">
+    <a href="../index.html" class="logo"> <img src="../images/zaad_logo3.png" alt="logo_image"  > </a>
+    <ul>
+      <li><a href="../index.html#landing"        onclick="toggle()"  >  الرئيسية</a></li>
+      <li><a href="#"       onclick="toggle()">  متجاتنا</a>    </li>
+      <li><a href="../index.html#drinks"   onclick="toggle()">  مشروبات</a></li>
+      <li><a href="../index.html#coffee"        onclick="toggle()">  بن</a>     </li>
+      <li><a href="../index.html#equipment"     onclick="toggle()">   معدات القهوه</a>  </li>
+      <li><a href="../index.html#about_us"     onclick="toggle()">   من نحن </a>  </li>
+      <li><a href="../index.html#contact_us"     onclick="toggle()">    اتصل بنا</a>  </li>
+    </ul>
+    <div class="toggle" onclick="toggle();"></div>
+  </header>
+  <!-- End Header Code -->
+
+
+  <!-- start  El menu -->
+  <div class="products" id="products">
+    <img src="../images/zad_menu.jpg" alt="">
+  </div>
+  <!-- End  El menu -->
+
+
+
+
+
+    <!-- Start CSS Code -->
+    <script src="../js/main.js"></script>
+    <script src="../js/external/bootstrap.min.js"></script>
+    <script src="../js/external/jquery-3.5.1.min.js"></script>
+
+</body>
+
+</html>

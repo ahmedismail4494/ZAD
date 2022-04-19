@@ -1,0 +1,586 @@
+/*
+
+    Theme Name:   ZAD
+    Theme Coder:  Ahmed Ismail
+    psd Designer: Ahmed Ismail
+
+ */
+
+
+/*  import google font  */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700&display=swap');
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+:root{
+  --bg-color:#fff;
+  --first-color: #f7931e;
+  --secound-color: #ffff00;
+  --thierd-color: #ccc;
+
+  --section_padding: 30px 0;
+  --heading-padding: 25px;
+
+  --main-transition: 0.4s;
+
+
+}
+
+
+/*   common component   */
+.title{
+  width: fit-content;
+  padding: 30px 0px;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  color: var(--first-color);
+  
+}.title::before{
+  position: absolute;
+  content: "";
+  width: 250px;
+  height: 5px;
+  background-color: #000;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}.title::after{
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+ .title h2 {
+  padding: 20px 0;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+/* Medium devices */
+@media (max-width: 767px) {
+  .title  {
+    max-width: 300px;
+  }
+}
+
+/* Large devices */
+@media (max-width: 991px) {
+
+}
+
+
+
+
+/*    ----------  Start  Zaad tamplet (html_css_bootstrap_js)  -------------    */
+/**/
+/**/
+
+/****----    Start Body     ----****/
+body {
+  direction: rtl;
+  background: #fff;
+  font-family: "Cairo", sans-serif;
+}
+/****----    End   Body     ----****/
+
+
+
+
+
+/*----*  Start  header  *----*/
+header{
+  min-width: 100%;
+  height: 10vh;
+  padding: 30px 0; 
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 5px 5px 5px #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 2px;
+  z-index: 1000;
+}
+header .logo { 
+  width: 50px; 
+  color: #fff; 
+  text-decoration: none; 
+  position: relative; }
+header .logo img { width: 100%; }
+header ul{ position: relative; display: flex; margin-top: 15px; }
+header ul li{ position: relative; list-style: none; }
+header ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+header ul li a.active,
+header ul li a:hover{
+  color: #fff;
+  background-color: #205aff;
+  border-radius: 10px;
+}
+header .toggle{
+  display: none;
+}
+
+
+@media (max-width: 992px) {
+  
+  header ul{
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    top: -100vh;
+    transform: translateY(-100);
+    opacity: 0;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+  }
+  header.active ul{
+    top: 10vh;
+    transform: translateY(0);
+    opacity: 1;
+    transition: 1s;
+  }
+  header ul li a{
+    margin: 10px 5px;
+    font-size: 18px;
+  }
+
+  header .toggle{
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  header .toggle::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff ;
+    top: 4px;
+    box-shadow: 0 10px 0 #fff;
+    transition: 0.5s;
+  }
+  header .toggle:after{
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  header.active .toggle::before{
+    top: 14px;
+    transform: rotate(45deg);
+    box-shadow: 0 0px 0 #fff;
+    transition: 0.5s;
+  }
+  header.active .toggle:after{
+    bottom: 14px;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+  }
+
+}
+
+
+/*----*  End  header  *---- */
+
+
+
+
+
+
+/*----*  start  Landing  *---- */
+.landing {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow: hidden;
+  background-image: url('../images/zaad_landing.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Medium devices */
+@media (max-width: 767px) {
+  .landing  { 
+    height: 70vh; 
+    background-position: left;
+  }
+}
+@media (max-width: 991px) {
+  .landing  { 
+    height: 80vh; 
+    background-position: left;
+  }
+}
+
+
+/*----*  End  Landing  *---- */
+
+
+
+
+
+
+/*----*  start  drinks  *---- */
+.drinks{
+  padding: var(--section_padding);
+
+ }
+ .drinks .card{
+  width: 100%;
+  overflow: hidden;
+ }
+ .drinks .card img {
+  width: 100;
+  height: 50vh;
+  transition: all 0.3s ease-in-out;
+ }.drinks .card:hover img {
+  transform: scale(1.1);
+ }
+
+
+/*----*  start  coffee  *---- */
+.coffee {
+  width: 100%;
+  position: relative;
+  padding: 20px 0;
+  background-color: #333;
+}
+.coffee .photo {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: 0px auto;
+  padding: 0px;
+  text-align: center;
+}
+.coffee .photo img {
+  position: relative;
+  width: 60%;
+  height: 100%;
+}
+.coffee .kinds {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.coffee .kinds ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 5px;
+  grid-auto-rows: minmax(80px, auto);
+}
+.coffee .kinds li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bolder;
+  list-style: none;
+  background-color: var(--first-color);
+  border-radius: 10px;
+}.coffee .kinds li:nth-of-type(odd) {
+  background-color: var(--thierd-color);
+}
+/* Medium devices */
+@media (max-width: 767px) {
+  .coffee .photo {  width: 100%; }
+}
+/* Large devices */
+@media (max-width: 991px) {
+  .coffee .photo {  width: 100%;  }
+}
+
+
+
+
+/*----*  start equipment  *---- */
+.equipment {
+  max-width: 100%;
+  max-height: 1000px;
+  background-color: #fff;
+  padding: var(--section_padding);
+  overflow: hidden;
+}
+.equipment .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-flow: dense;
+}
+
+.equipment .gallery .gallery_item {
+  margin: 0.5rem;
+  position: relative;
+  overflow: hidden;
+
+}
+.equipment .gallery .gallery_item:nth-child(1),
+.equipment .gallery .gallery_item:nth-child(5) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.equipment .gallery .gallery_item:nth-child(2),
+.equipment  .gallery .gallery_item:nth-child(4),
+.equipment .gallery .gallery_item:nth-child(7) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.equipment .gallery .gallery_item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--main-transition);
+}.equipment .gallery .gallery_item:hover img{
+  transform: scale(1.1) skew(5deg);
+}
+
+
+
+/* Medium devices */
+@media (max-width: 767px) {
+  .equipment {
+    max-height: 1200px;
+  }
+  .equipment .gallery .gallery_item{
+    grid-column: unset !important;
+    grid-row:  unset !important;
+  }
+}
+
+/* Large devices */
+@media (max-width: 991px) {
+  .equipment {
+    max-height: 1750px;
+  }
+  .equipment .gallery .gallery_item {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    grid-template-rows: minmax(auto, auto);
+  }
+}
+
+
+/*----*  End  services *---- */
+
+
+
+
+
+/*  Start about_us Rules  */
+.about_us {
+  padding: 60px 0;
+  background-color: #333;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.about_us .container {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+  gap: 70px 40px;
+}
+.about_us .box  {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  position: relative;
+}
+.about_us .box img {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -30%;
+  left: -20px;
+  border-radius: 50%;
+  border: 10px solid #333;
+}
+.about_us .box h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.about_us .box span {
+  color: #777;
+  text-transform: capitalize;
+}
+.about_us .box .rate {
+  margin: 15px 0;
+  color: rgb(243, 243, 0);
+}
+.about_us .box p {
+  color: #777;
+  line-height: 1.5;
+}
+
+  /* Small */
+  @media (max-width: 767px) {  
+    .about_us .box img {
+      width: 150px;
+      height: 150px;
+      top: -30%;
+      left: 0px;
+      margin-top: 10px;
+    }
+  }
+  /* Medium */
+  @media (max-width: 991px) {   }
+  /* Large */
+  @media (max-width: 1199px) {   }
+
+/*  End about_us Rules  */
+
+
+
+
+
+/*  Start contact_us Rules  */
+.contact_us  {
+  padding: var(--section_padding);
+}
+.contact_us .box  {
+  margin: 50px 10px;
+}
+.contact_us .box_social h3 {
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--first-color);
+}
+.contact_us .box_social .socail {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+}
+.contact_us .box_social .socail a {
+  display: block;
+  width: 60px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  background-color: #333;
+  transition: 0.5s;
+}.contact_us .box_social .socail .facebook:hover {
+  background-color: #3b5998;
+}.contact_us .box_social .socail .twitter:hover {
+  background-color: #55acee;
+}.contact_us .box_social .socail .youtube:hover {
+  background-color: #ff0000;
+}
+.contact_us .box_social .text {
+  line-height: 2;
+  color: #b9b9b9;
+}
+
+
+.contact_us .box_info .line {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+.contact_us .box_info .line i {
+  color: var(--first-color);
+  font-size: 35px;
+  width: 10%;
+}
+.contact_us .box_info .line .info {
+  position: relative;
+  width: 90%;
+  color: #b9b9b9;
+}
+
+/* Small */
+@media (max-width: 767px) {  
+  .contact_us .box  {
+    margin: 25px 10px;
+  }
+}
+/* Medium */
+@media (max-width: 991px) { 
+  .contact_us .box  {
+    margin: 25px 10px;
+  }
+}
+/*  End contact_us Rules  */
+
+
+
+
+
+
+/*  Start Footer Rules  */
+footer{
+  height: 10vh;
+  width: 100%;
+  line-height: 10vh;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #000;
+  text-transform: capitalize;
+}
+/*  End Footer Rules  */
+
+
+
+
+
+
+
+
+
+
+/*  Start ..... Rules  */
+
+
+  /* Small */
+  @media (max-width: 767px) {    }
+  /* Medium */
+  @media (max-width: 991px) {   }
+  /* Large */
+  @media (max-width: 1199px) {   }
+/*  End ..... Rules  */
+
+
