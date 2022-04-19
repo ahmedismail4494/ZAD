@@ -323,11 +323,11 @@ header .toggle{
 }
 /* Medium devices */
 @media (max-width: 767px) {
-  .coffee .photo {  width: 100%; }
+  .coffee .photo img {  width: 100%; }
 }
 /* Large devices */
 @media (max-width: 991px) {
-  .coffee .photo {  width: 100%;  }
+  .coffee .photo img {  width: 100%;  }
 }
 
 
@@ -379,7 +379,7 @@ header .toggle{
 /* Medium devices */
 @media (max-width: 767px) {
   .equipment {
-    max-height: 1200px;
+    max-height: 1750px;
   }
   .equipment .gallery .gallery_item{
     grid-column: unset !important;
@@ -399,7 +399,7 @@ header .toggle{
 }
 
 
-/*----*  End  services *---- */
+/*----*  End  equipment *---- */
 
 
 
