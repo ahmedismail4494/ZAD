@@ -103,6 +103,22 @@ body {
 
 
 
+/****----    Start Animation Scroll     ----****/
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+/****----    End Animation Scroll      ----****/
+
+
+
+
 
 /*----*  Start  header  *----*/
 header{
@@ -233,6 +249,8 @@ header .toggle{
   background-image: url('../images/zaad_landing.jpg');
   background-size: cover;
   background-position: center;
+
+  animation: FadeIn 1s ease-in-out;
 }
 
 
@@ -250,7 +268,16 @@ header .toggle{
   }
 }
 
-
+@keyframes FadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 /*----*  End  Landing  *---- */
 
 
@@ -476,6 +503,7 @@ header .toggle{
 /*  Start contact_us Rules  */
 .contact_us  {
   padding: var(--section_padding);
+  overflow: hidden;
 }
 .contact_us .box  {
   margin: 50px 10px;
