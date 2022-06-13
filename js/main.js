@@ -12,6 +12,24 @@ link.onclick = function () { "use strict";
 } */
 
 
+window.addEventListener('scroll', reveal);
+
+function reveal() {
+  let reveal = document.querySelectorAll('.reveal');
+
+  reveal.forEach((r) => {
+    let windowHeight = window.innerHeight;
+    let revealTop = r.getBoundingClientRect().top;
+    let revealPoint = 150;
+
+    if(revealTop < windowHeight - revealPoint){
+      r.classList.add('active');
+    }else{
+      r.classList.remove('active');
+    }
+    
+  })
+}
 
 
 
