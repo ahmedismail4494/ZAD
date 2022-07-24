@@ -45,7 +45,7 @@
   position: relative;
   margin: 0 auto;
   color: var(--first-color);
-  
+
 }.title::before{
   position: absolute;
   content: "";
@@ -124,7 +124,7 @@ body {
 header{
   min-width: 100%;
   height: 10vh;
-  padding: 30px 0; 
+  padding: 30px 0;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
   box-shadow: 5px 5px 5px #ddd;
@@ -134,10 +134,10 @@ header{
   letter-spacing: 2px;
   z-index: 1000;
 }
-header .logo { 
-  width: 50px; 
-  color: #fff; 
-  text-decoration: none; 
+header .logo {
+  width: 50px;
+  color: #fff;
+  text-decoration: none;
   position: relative; }
 header .logo img { width: 100%; }
 header ul{ position: relative; display: flex; margin-top: 15px; }
@@ -166,7 +166,7 @@ header .toggle{
 
 
 @media (max-width: 992px) {
-  
+
   header ul{
     position: absolute;
     width: 100%;
@@ -256,14 +256,14 @@ header .toggle{
 
 /* Medium devices */
 @media (max-width: 767px) {
-  .landing  { 
-    height: 70vh; 
+  .landing  {
+    height: 70vh;
     background-position: left;
   }
 }
 @media (max-width: 991px) {
-  .landing  { 
-    height: 80vh; 
+  .landing  {
+    height: 80vh;
     background-position: left;
   }
 }
@@ -480,7 +480,7 @@ header .toggle{
 }
 
   /* Small */
-  @media (max-width: 767px) {  
+  @media (max-width: 767px) {
     .about_us .box img {
       width: 150px;
       height: 150px;
@@ -501,7 +501,8 @@ header .toggle{
 
 
 /*  Start contact_us Rules  */
-.contact_us  {
+.contact_us {
+  height: auto;
   padding: var(--section_padding);
   overflow: hidden;
 }
@@ -559,13 +560,13 @@ header .toggle{
 }
 
 /* Small */
-@media (max-width: 767px) {  
+@media (max-width: 767px) {
   .contact_us .box  {
     margin: 25px 10px;
   }
 }
 /* Medium */
-@media (max-width: 991px) { 
+@media (max-width: 991px) {
   .contact_us .box  {
     margin: 25px 10px;
   }
@@ -579,24 +580,24 @@ header .toggle{
 
 /*  Start Footer Rules  */
 footer{
-  height: 10vh;
-  width: 100%;
-  line-height: 10vh;
+  position: relative;
+  bottom: 0;
+  min-height: 10vh;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+footer p{
   color: #fff;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  background-color: #000;
   text-transform: capitalize;
 }
+
 /*  End Footer Rules  */
-
-
-
-
-
-
-
 
 
 
@@ -610,5 +611,3 @@ footer{
   /* Large */
   @media (max-width: 1199px) {   }
 /*  End ..... Rules  */
-
-
